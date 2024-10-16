@@ -8,12 +8,18 @@ const audioFiles = {
     s1: document.getElementById('as6')
 };
 
+let currentlyPlaying = null; // Track currently playing audio
+
 // Function to play the audio for the given string ID
 function playString(thisString) {
     const audioElement = audioFiles[thisString];
     if (audioElement) {
-        audioElement.pause(); // Stop any currently playing audio
-        audioElement.currentTime = 0; // Reset time to start
+        // Check if a different audio is currently playing
+        if (currentlyPlaying && currentlyPlaying !== audioElement) {
+            currentlyPlaying.pause(); // Pause the currently playing audio
+            currentlyPlaying.currentTime = 0; // Reset time to start
+        }
+
         const playPromise = audioElement.play(); // Start playback
 
         if (playPromise !== undefined) {
@@ -23,11 +29,15 @@ function playString(thisString) {
                 stringElement.classList.add('playing');
                 document.getElementById(thisString + 'Note').classList.add('lightOn');
 
+                // Update currentlyPlaying to the current audio element
+                currentlyPlaying = audioElement;
+
                 // Remove class when audio ends
                 const removePlayingSoundClass = () => {
                     stringElement.classList.remove('playing-sound');
                     document.getElementById(thisString + 'Note').classList.remove('lightOn');
                     audioElement.removeEventListener('ended', removePlayingSoundClass); // Clean up the event listener
+                    currentlyPlaying = null; // Reset currentlyPlaying when done
                 };
 
                 audioElement.addEventListener('ended', removePlayingSoundClass);
