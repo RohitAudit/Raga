@@ -77,3 +77,47 @@
   .launching-soon {
     animation: moveRight 1.5s ease-in-out infinite; /* Applies the right-side motion */
   }
+  .fade-in {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the animation */
+    margin: 10px 0;
+}
+
+.fade-in.is-visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+
+  /* Delay Classes */
+.delay-1 {
+  transition-delay: 0.1s; /* 100 ms */
+}
+.delay-2 {
+  transition-delay: 0.2s; /* 200 ms */
+}
+.delay-3 {
+  transition-delay: 0.3s; /* 300 ms */
+}
+.delay-4 {
+  transition-delay: 0.4s; /* 400 ms */
+}
+.delay-5 {
+  transition-delay: 0.5s; /* 500 ms */
+}
+.delay-6 {
+  transition-delay: 0.6s; /* 600 ms */
+}
+.delay-7 {
+  transition-delay: 0.7s; /* 700 ms */
+}
+.delay-8 {
+  transition-delay: 0.8s; /* 800 ms */
+}
+.delay-9 {
+  transition-delay: 0.9s; /* 900 ms */
+}
+.delay-10 {
+  transition-delay: 1s; /* 1000 ms */
+}
