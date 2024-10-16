@@ -14,9 +14,10 @@
   
   /* Berchain button default style */
   .btn-berchain {
-    color: #fbbf24; /* text-amber-300 */
-    background-color: transparent;
-    border-color: #fbbf24; /* border-amber-300 */
+    color: #fff; /* text-amber-300 */
+    background-color: #000;
+    border-color: #000; /* border-amber-300 */
+    height: 54px;
   }
   
   /* Movement button default style */
@@ -24,6 +25,8 @@
     color: #000; /* text-black */
     background-color: #fbbf24; /* bg-amber-300 */
     border-color: #fbbf24; /* border-amber-300 */
+    height: 50px;
+
   }
   
   /* Hover Effects */
@@ -34,14 +37,11 @@
   
   /* Berchain button hover effect */
   .btn-berchain:hover {
-    background-color: #fbbf24; /* Change background to amber */
-    color: #000; /* Change text to black */
+    background-color: #000; /* Change background to amber */
   }
   
   /* Movement button hover effect */
   .btn-movement:hover {
-    background-color: #000; /* Change background to black */
-    color: #fbbf24; /* Change text to amber */
   }
 
   /* Base style for the social media icons */
