@@ -73,3 +73,10 @@ document.querySelectorAll('.string').forEach((button) => {
         playString(button.id); // Play audio when hovered over
     });
 });
+
+// Enable audio playback after any user interaction on the document
+document.addEventListener('click', () => {
+    if (!audioEnabled) {
+        enableAudio(); // Enable audio and play strings
+    }
+});

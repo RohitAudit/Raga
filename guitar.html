@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Guitar</title>
+	<link rel="stylesheet" href="./css/guitar.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="tuner-body e-classic" id="guitar-body">
+            <button onmouseenter="playString(this.id)" class="string" id="s6"><span></span></button>
+            <button onmouseenter="playString(this.id)" class="string" id="s5"><span></span></button>
+            <button onmouseenter="playString(this.id)" class="string" id="s4"><span></span></button>
+            <button onmouseenter="playString(this.id)" class="string" id="s3"><span></span></button>
+            <button onmouseenter="playString(this.id)" class="string" id="s2"><span></span></button>
+            <button onmouseenter="playString(this.id)" class="string" id="s1"><span></span></button>
+            <div class="notes">
+                <span id="s6Note">E</span>
+                <span id="s5Note">A</span>
+                <span id="s4Note">D</span>
+                <span id="s3Note">G</span>
+                <span id="s2Note">B</span>
+                <span id="s1Note">E</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Files -->
+    <audio id="as1" src="https://cdn.josetxu.com/audio/cgs-1.mp3"></audio>
+    <audio id="as2" src="https://cdn.josetxu.com/audio/cgs-2.mp3"></audio>
+    <audio id="as3" src="https://cdn.josetxu.com/audio/cgs-3.mp3"></audio>
+    <audio id="as4" src="https://cdn.josetxu.com/audio/cgs-4.mp3"></audio>
+    <audio id="as5" src="https://cdn.josetxu.com/audio/cgs-5.mp3"></audio>
+    <audio id="as6" src="https://cdn.josetxu.com/audio/cgs-6.mp3"></audio>
+
+    <script src="./guitar.js">
+    
+    </script>
+</body>
+</html>
