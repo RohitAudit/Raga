@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
 // Play all strings with delays
 function playAllStrings() {
     const stringIds = ['s6', 's5', 's4', 's3', 's2', 's1'];
-    const delays = [0, 300, 600, 900, 1200, 1500]; // Delay for each string in milliseconds
+    const delays = [0]; 
 
     stringIds.forEach((id, index) => {
         setTimeout(() => {
