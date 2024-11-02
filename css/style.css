@@ -1,96 +1,94 @@
 /* Common button styles */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.375rem; /* gap-1.5 */
-    padding: 0.875rem 1.25rem; /* py-3.5 px-5 */
-    font-size: 1rem;
-    border-radius: 0.375rem; /* rounded-md */
-    border: 2px solid;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover */
-  }
-  
-  /* Berchain button default style */
-  .btn-berchain {
-    color: #fff; /* text-amber-300 */
-    background-color: #000;
-    border-color: #000; /* border-amber-300 */
-    height: 54px;
-  }
-  
-  /* Movement button default style */
-  .btn-movement {
-    color: #000; /* text-black */
-    background-color: #fbbf24; /* bg-amber-300 */
-    border-color: #fbbf24; /* border-amber-300 */
-    height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem; /* gap-1.5 */
+  padding: 0.875rem 1.25rem; /* py-3.5 px-5 */
+  font-size: 1rem;
+  border-radius: 0.375rem; /* rounded-md */
+  border: 2px solid;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover */
+}
 
-  }
-  
-  /* Hover Effects */
-  .btn:hover {
-    transform: scale(1.05); /* Slightly increase the size */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow effect */
-  }
-  
-  /* Berchain button hover effect */
-  .btn-berchain:hover {
-    background-color: #000; /* Change background to amber */
-  }
-  
-  /* Movement button hover effect */
-  .btn-movement:hover {
-  }
+/* Berchain button default style */
+.btn-berchain {
+  color: #fff; /* text-amber-300 */
+  background-color: #000;
+  border-color: #000; /* border-amber-300 */
+  height: 54px;
+}
 
-  /* Base style for the social media icons */
+/* Movement button default style */
+.btn-movement {
+  color: #000; /* text-black */
+  background-color: #fbbf24; /* bg-amber-300 */
+  border-color: #fbbf24; /* border-amber-300 */
+  height: 50px;
+}
+
+/* Hover Effects */
+.btn:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+/* Berchain button hover effect */
+.btn-berchain:hover {
+  background-color: #000; /* Change background to amber */
+}
+
+/* Movement button hover effect */
+.btn-movement:hover {
+}
+
+/* Base style for the social media icons */
 .icon {
-    transition: all 0.3s ease-in-out;
-    display: block;
-  }
-  
-  /* Hover effect */
-  .icon:hover {
-    transform: scale(1.2); /* Slightly enlarges the icon */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds a shadow */
-    filter: brightness(1.2); /* Lightens the icon slightly */
-  }
-  
-  /* Optional: Add slight rotation to make it more dynamic */
-  .icon:hover {
-    transform: scale(1.2) rotate(5deg);
-  }
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
 
-  @keyframes moveRight {
-    0% {
-      transform: translateX(0); /* Starts at original position */
-    }
-    50% {
-      transform: translateX(10px); /* Moves slightly to the right */
-    }
-    100% {
-      transform: translateX(0); /* Returns to original position */
-    }
+/* Hover effect */
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarges the icon */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds a shadow */
+  filter: brightness(1.2); /* Lightens the icon slightly */
+}
+
+/* Optional: Add slight rotation to make it more dynamic */
+.icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0); /* Starts at original position */
   }
-  
-  .launching-soon {
-    animation: moveRight 1.5s ease-in-out infinite; /* Applies the right-side motion */
+  50% {
+    transform: translateX(10px); /* Moves slightly to the right */
   }
-  .fade-in {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start below */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the animation */
-    margin: 10px 0;
+  100% {
+    transform: translateX(0); /* Returns to original position */
+  }
+}
+
+.launching-soon {
+  animation: moveRight 1.5s ease-in-out infinite; /* Applies the right-side motion */
+}
+.fade-in {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the animation */
+  margin: 10px 0;
 }
 
 .fade-in.is-visible {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
 }
 
-
-  /* Delay Classes */
+/* Delay Classes */
 .delay-1 {
   transition-delay: 0.1s; /* 100 ms */
 }
